@@ -1,18 +1,9 @@
 import React from 'react'
+import './Header.css'
 
 const Header = () => {
   return (
-    <>
-     <nav className="navbar navbar-dark bg-dark">
-      <div className="container">
-        <h2 className="text-white">
-          World Dashboard
-        </h2>
-      </div>
-    </nav>
-    
-    
-    </>
+    <header className='header1'>WORLD DASHBOARD</header>
   )
 }
 
