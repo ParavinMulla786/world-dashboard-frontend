@@ -13,6 +13,15 @@ import PopulationByContinent from './components/PopulationByContinent'
 import PopulationByCountry from './components/PopulationByCountry'
 import TotalLanguages from './components/TotalLanguages'
 import TopTenLanguages from './components/TopTenLanguages'
+import CountriesGDPPerCapita from './components/CountriesGDPPerCapita'
+import CountriesLifeExpectancy from './components/CountriesLifeExpectancy'
+import TopLifeExpectancyCountries from './components/TopLifeExpectancyCountries'
+import LowestLifeExpectancyCountries from './components/LowestLifeExpectancyCountries'
+import CityDetails from './components/CityDetails'
+import LargestCities from './components/LargestCities'
+import TotalCities from './components/TotalCities'
+import CountriesByPopulation from './components/CountriesByPopulation;'
+import CountriesLessPopulation from './components/CountriesLessPopulation'
 
 function App() {
   const [count, setCount] = useState();
@@ -24,7 +33,8 @@ function App() {
    <TotalPop />
    <TotalContriesCount />
    <AveragePopulation />
-
+  <CountriesByPopulation />
+  <CountriesLessPopulation />
    <PopulationByContinent />
    <TopTenPop />
 
@@ -36,6 +46,16 @@ function App() {
    <TopTenLanguages />
 
 
+
+   <CountriesGDPPerCapita />
+
+   <CountriesLifeExpectancy />
+
+   <TopLifeExpectancyCountries />
+   <LowestLifeExpectancyCountries />
+   <CityDetails />
+   <LargestCities />
+   <TotalCities />
      </>
   )
 }
