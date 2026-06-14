@@ -172,3 +172,15 @@ export async function getCountriesWithLessPopulation(maxPop) {
 
     return [];
 }
+
+export async function getLanguagesByCountry(countryName) {
+  const res = await axiosInstance.get(
+    `/country-languages/${countryName}`
+  );
+
+  if (res.data.success) {
+    return res.data.languages;
+  }
+
+  return [];
+}

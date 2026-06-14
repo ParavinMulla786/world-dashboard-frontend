@@ -22,6 +22,7 @@ import LargestCities from './components/LargestCities'
 import TotalCities from './components/TotalCities'
 import CountriesByPopulation from './components/CountriesByPopulation;'
 import CountriesLessPopulation from './components/CountriesLessPopulation'
+import CountryLanguages from './components/CountryLanguages'
 
 function App() {
   const [count, setCount] = useState();
@@ -56,6 +57,8 @@ function App() {
    <CityDetails />
    <LargestCities />
    <TotalCities />
+
+   <CountryLanguages />
      </>
   )
 }
