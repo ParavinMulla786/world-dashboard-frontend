@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getAverageLifeExpectancy } from '../api/api';
+import { getAverageLifeExpectancy } from '../../api/api';
 
 function CountriesLifeExpectancy() {
 

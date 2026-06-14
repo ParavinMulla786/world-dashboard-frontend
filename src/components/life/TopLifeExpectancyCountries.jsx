@@ -8,7 +8,7 @@ import {
     Tooltip,   // ✅ ADD THIS
     ResponsiveContainer
 } from "recharts";
-import { getTopLifeExpectancyCountries } from "../api/api";
+import { getTopLifeExpectancyCountries } from "../../api/api";
 
 function TopLifeExpectancyChart() {
 

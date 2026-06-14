@@ -1,0 +1,172 @@
+.chart-card,
+.search-card {
+  background: #111c2e;
+  border-radius: 14px;
+  padding: 14px;
+  margin: 12px auto;
+  width: 100%;
+  max-width: 850px;
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+
+  transition: all 0.25s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-3px);
+  background: #16263d;
+}
+
+/* =========================
+   TITLES
+========================= */
+
+.chart-title,
+.search-title {
+  text-align: center;
+  color: #e5e7eb;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* =========================
+   CHART AREA
+========================= */
+
+.chart-container {
+  width: 100%;
+  height: 340px;
+}
+
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.search-input {
+  width: 200px;
+  padding: 8px 10px;
+  border-radius: 8px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0b1220;
+  color: #e5e7eb;
+
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.search-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.blue-btn {
+  background: #3b82f6;
+}
+
+.blue-btn:hover {
+  background: #2563eb;
+}
+
+.red-btn {
+  background: #ef4444;
+}
+
+.red-btn:hover {
+  background: #dc2626;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.country-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e5e7eb;
+}
+
+.country-table th {
+  background: #1f2a44;
+  color: #e5e7eb;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.country-table td {
+  text-align: center;
+  padding: 9px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 13px;
+}
+
+.country-table tr:hover {
+  background: #16263d;
+}
+
+/* =========================
+   RESULT CARD
+========================= */
+
+.result-card {
+  margin-top: 12px;
+  padding: 12px;
+  width: 14rem;
+  background: #0b1220;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result-card h3 {
+  margin-bottom: 8px;
+  color: #e5e7eb;
+  font-size: 15px;
+}
+
+.result-card p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.no-data {
+  text-align: center;
+  padding: 15px;
+  color: #94a3b8;
+  font-size: 13px;
+}

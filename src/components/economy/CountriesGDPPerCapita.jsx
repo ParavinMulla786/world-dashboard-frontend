@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { getLowestLifeExpectancyCountries } from "../api/api";
+import React, { useEffect, useState } from 'react';
+import { getCountriesGDPPerCapita } from '../../api/api';
 
-function LowestLifeExpectancyCountries() {
+function CountriesGDPPerCapita() {
 
     const [countries, setCountries] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -9,10 +9,10 @@ function LowestLifeExpectancyCountries() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await getLowestLifeExpectancyCountries();
+                const res = await getCountriesGDPPerCapita();
                 setCountries(res || []);
             } catch (error) {
-                console.error(error);
+                console.error("Error fetching data:", error);
                 setCountries([]);
             } finally {
                 setLoading(false);
@@ -23,7 +23,11 @@ function LowestLifeExpectancyCountries() {
     }, []);
 
     if (loading) {
-        return <h3 style={{ textAlign: "center" }}>Loading...</h3>;
+        return (
+            <div style={{ textAlign: "center", marginTop: "50px" }}>
+                Loading GDP data...
+            </div>
+        );
     }
 
     return (
@@ -35,39 +39,43 @@ function LowestLifeExpectancyCountries() {
             borderRadius: "15px",
             boxShadow: "0 4px 12px rgba(0,0,0,0.1)"
         }}>
+
             <h2 style={{ textAlign: "center" }}>
-                ⚠️ Lowest Life Expectancy Countries
+                💰 Countries GDP Per Capita
             </h2>
 
             <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "20px" }}>
                 <thead>
-                    <tr style={{ backgroundColor: "#dc2626", color: "white" }}>
+                    <tr style={{ backgroundColor: "#4F46E5", color: "white" }}>
                         <th style={{ padding: "12px" }}>Country</th>
                         <th style={{ padding: "12px" }}>Population</th>
-                        <th style={{ padding: "12px" }}>Life Expectancy</th>
+                        <th style={{ padding: "12px" }}>GNP</th>
+                        <th style={{ padding: "12px" }}>GDP Per Capita</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     {countries.length === 0 ? (
                         <tr>
-                            <td colSpan="3" style={{ padding: "20px", textAlign: "center" }}>
+                            <td colSpan="4" style={{ padding: "20px" }}>
                                 No data available
                             </td>
                         </tr>
                     ) : (
-                        countries.map((c) => (
+                        countries.map((country) => (
                             <tr
-                                key={c.Name}
-                                style={{ textAlign: "center", borderBottom: "1px solid #ddd" }}
+                                key={country.Code || country.Name}
+                                style={{
+                                    borderBottom: "1px solid #ddd",
+                                    textAlign: "center"
+                                }}
                             >
-                                <td style={{ padding: "10px" }}>{c.Name}</td>
+                                <td style={{ padding: "10px" }}>{country.Name}</td>
                                 <td style={{ padding: "10px" }}>
-                                    {c.Population?.toLocaleString() || "N/A"}
+                                    {country.Population?.toLocaleString?.() || "N/A"}
                                 </td>
-                                <td style={{ padding: "10px" }}>
-                                    {c.LifeExpectancy} years
-                                </td>
+                                <td style={{ padding: "10px" }}>{country.GNP || "N/A"}</td>
+                                <td style={{ padding: "10px" }}>{country.GDPPerCapita || "N/A"}</td>
                             </tr>
                         ))
                     )}
@@ -77,4 +85,4 @@ function LowestLifeExpectancyCountries() {
     );
 }
 
-export default LowestLifeExpectancyCountries;
+export default CountriesGDPPerCapita;   

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getLargestCities } from "../api/api";
+import { getLargestCities } from "../../api/api";
 
 function LargestCities() {
 

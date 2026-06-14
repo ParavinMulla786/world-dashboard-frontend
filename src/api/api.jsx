@@ -160,17 +160,12 @@ export async function getCountriesByMinPopulation(minPop) {
 }
 
 
-
 export async function getCountriesWithLessPopulation(maxPop) {
-    const res = await axiosInstance.get(
-        `/countries/population-less/${maxPop}`
-    );
+  const res = await axiosInstance.get(
+    `/countries-with-less-population/${maxPop}`
+  );
 
-    if (res.data.success) {
-        return res.data.countries;
-    }
-
-    return [];
+  return res.data.success ? res.data.countries : [];
 }
 
 export async function getLanguagesByCountry(countryName) {

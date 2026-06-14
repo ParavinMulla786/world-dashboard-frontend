@@ -1,0 +1,102 @@
+.population-page {
+  padding: 12px;
+  background: #0b1220;
+  min-height: 100vh;
+  color: #e5e7eb;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+.page-header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.page-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.page-header p {
+  color: #94a3b8; /* better than pure white */
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+.top-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* =========================
+   CARDS
+========================= */
+.kpi-card,
+.search-card,
+.card {
+  background: #111c2e;
+  padding: 12px;
+  border-radius: 12px;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+
+  transition: all 0.2s ease;
+}
+
+.kpi-card:hover,
+.search-card:hover,
+.card:hover {
+  transform: translateY(-3px);
+  background: #16263d;
+}
+
+/* =========================
+   SECTION
+========================= */
+.section {
+  margin-bottom: 18px;
+}
+
+.section h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+/* =========================
+   GRIDS
+========================= */
+.charts-grid,
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+  .top-bar,
+  .charts-grid,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* optional utility */
+.title {
+  color: #ffffff;
+  font-weight: 600;
+}
+

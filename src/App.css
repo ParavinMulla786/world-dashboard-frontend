@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b1220; /* SAME GLOBAL DARK BACKGROUND */
+  color: #e5e7eb;
+  font-family: system-ui, sans-serif;
+}
+
+/* APP LAYOUT */
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 250px;
+  background: #111c2e;
+  color: white;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.sidebar a:hover {
+  background: #16263d;
+  color: #fff;
+}
+
+.sidebar a.active {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+
+  /* IMPORTANT: match global theme */
+  background: #0b1220;
+
+  padding: 20px;
+}
+
+/* CARDS GRID */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}

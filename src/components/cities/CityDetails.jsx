@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { getCityByName } from "../api/api";
+import { getCityByName } from "../../api/api";
 
 function CityDetails() {
   const [cityName, setCityName] = useState("");
