@@ -11,7 +11,7 @@ function CityDetails() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "20px", color:"white" }}>
       <h2>City Information</h2>
 
       <input
